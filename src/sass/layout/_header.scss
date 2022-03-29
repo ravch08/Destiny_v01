@@ -1,3 +1,5 @@
+@use "../abstracts/helper.scss" as h;
+
 header {
   width: 100%;
   padding: 2.5rem 0;
@@ -5,7 +7,7 @@ header {
   top: 0;
   left: 0;
   z-index: 99;
-  @include transition(padding, 0.3s);
+  transition: padding 0.3s ease-in-out;
 
   .nav-list,
   .header-wrapper {
@@ -16,15 +18,15 @@ header {
 
 .sticky {
   background-color: white;
-  box-shadow: $box-shadow-sm;
+  box-shadow: h.$box-shadow-sm;
   padding: 1.5rem 0 !important;
 
   .nav-list .nav-link {
-    color: $color-Dark-800;
+    color: h.$color-Dark-800;
   }
 
   .hamburger-menu .line {
-    background-color: $color-Dark-400;
+    background-color: h.$color-Dark-400;
   }
 }
 
@@ -35,12 +37,12 @@ header {
 
   .nav-link {
     padding: 2rem 1rem;
-    color: $color-light-100;
-    font-size: $fs-subheading;
-    @include transition(color, 0.3s);
+    color: h.$color-light-100;
+    font-size: h.$fs-subheading;
+    transition: color 0.3s ease-in-out;
 
     &:hover {
-      color: $color-Dark-100;
+      color: h.$color-Dark-100;
     }
   }
 }
@@ -55,12 +57,12 @@ header {
   .line {
     width: 3rem;
     height: 0.2rem;
-    @include transition(width, 0.3s);
-    background-color: $color-light-100;
+    transition: width 0.3s ease-in-out;
+    background-color: h.$color-light-100;
   }
 
   &:hover .line {
-    background-color: $color-light-800;
+    background-color: h.$color-light-800;
 
     &:first-child {
       width: 25%;
@@ -78,8 +80,8 @@ header {
   position: fixed;
   top: 0;
   right: -100%;
-  background-color: $color-primary;
-  @include transition(right, 0.3s);
+  background-color: h.$color-primary;
+  transition: right 0.3s ease-in-out;
 
   nav {
     height: 100%;
@@ -93,8 +95,8 @@ header {
     .nav-link {
       font-size: 1.8rem;
       padding: 2.5rem;
-      color: $color-light-100;
-      @include transition(transform, 0.3s);
+      color: h.$color-light-100;
+      transition: transform 0.3s ease-in-out;
 
       &:hover {
         transform: translateX(1rem);
@@ -111,17 +113,17 @@ header {
       font-style: italic;
       margin-right: 0.3rem;
       letter-spacing: 0.2rem;
-      color: $color-light-100;
+      color: h.$color-light-100;
     }
 
     svg {
-      fill: $color-Dark-100;
+      fill: h.$color-Dark-100;
       transform: translateY(0.4rem);
-      @include transition(transform, 0.3s);
+      transition: transform 0.3s ease-in-out;
     }
 
     &:hover svg {
-      fill: $color-light-100;
+      fill: h.$color-light-100;
       transform: translateY(0.6rem);
     }
   }
@@ -144,7 +146,7 @@ header {
     top: 0;
     left: 0;
     z-index: 0;
-    background: $color-gradient2;
+    background: h.$color-gradient2;
   }
 
   .container {
@@ -163,12 +165,12 @@ header {
     transform: translateY(4rem);
 
     h1 {
-      color: $color-light-100;
+      color: h.$color-light-100;
     }
 
     p {
       margin: 1.5rem 0 2.5rem;
-      color: $color-light-100;
+      color: h.$color-light-100;
     }
   }
 }

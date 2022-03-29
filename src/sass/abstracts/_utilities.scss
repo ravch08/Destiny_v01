@@ -1,14 +1,15 @@
 // CLASS DEFAULTS ----------------------------------------------------------------------------------
+@use "./variables" as v;
 
 .container {
   width: 90%;
   height: 100%;
   margin: 0 auto;
-  max-width: $width-container;
+  max-width: v.$width-container;
 }
 
 section {
-  padding: $section-padding 0;
+  padding: v.$section-padding 0;
 }
 
 .pr-05 {
@@ -46,8 +47,8 @@ section {
 
   p {
     margin: 2rem 0 4rem;
-    color: $color-Dark-100;
-    font-size: $fs-subheading;
+    color: v.$color-Dark-100;
+    font-size: v.$fs-subheading;
   }
 }
 

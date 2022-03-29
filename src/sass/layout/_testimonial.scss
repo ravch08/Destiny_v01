@@ -1,3 +1,5 @@
+@use "../abstracts/helper.scss" as h;
+
 #testimonials {
   .swiper-slide {
     padding-bottom: 3.5rem;
@@ -27,7 +29,7 @@
 }
 
 .swiper-pagination-bullet-active {
-  background-color: $color-primary;
+  background-color: h.$color-primary;
 }
 
 @media screen and (max-width: 1024px) {
